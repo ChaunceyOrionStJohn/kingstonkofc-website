@@ -1,0 +1,283 @@
+/* ==========================================================================
+   Knights of Columbus, Kingston Council #275
+   Stylesheet. You should not need to touch this file to edit page text.
+   Colors are defined once below -- change them here to change the whole site.
+   ========================================================================== */
+
+:root {
+  --navy:   #12305c;
+  --navy-d: #0b2140;
+  --red:    #b3122c;
+  --gold:   #b08721;
+  --ink:    #1c2430;
+  --muted:  #55636f;
+  --line:   #dfe4ea;
+  --bg:     #ffffff;
+  --bg-alt: #f5f7fa;
+  --wrap:   68rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  /* Generous base size -- much of the readership is older. */
+  font: 1.125rem/1.7 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+/* ---------- Layout ---------- */
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 1.5rem; }
+
+main { padding: 2.5rem 0 4rem; }
+
+section + section { margin-top: 3rem; }
+
+/* ---------- Skip link ---------- */
+
+.skip {
+  position: absolute; left: -9999px;
+  background: var(--gold); color: #fff; padding: .75rem 1.25rem; z-index: 100;
+}
+.skip:focus { left: 1rem; top: 1rem; }
+
+/* ---------- Header ---------- */
+
+.masthead { background: var(--navy); color: #fff; }
+
+.masthead .wrap {
+  display: flex; align-items: center; gap: 1.25rem;
+  padding-top: 1.25rem; padding-bottom: 1.25rem;
+}
+
+.crest { flex: 0 0 auto; width: 68px; height: 68px; }
+
+.masthead h1 {
+  margin: 0;
+  font-size: clamp(1.35rem, 3.2vw, 2rem);
+  line-height: 1.15;
+  letter-spacing: .01em;
+}
+
+.masthead .tagline {
+  margin: .3rem 0 0;
+  font-size: .95rem;
+  color: #c3d0e2;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+/* ---------- Navigation ---------- */
+
+nav.main { background: var(--navy-d); border-bottom: 4px solid var(--gold); }
+
+nav.main ul {
+  max-width: var(--wrap); margin: 0 auto; padding: 0 1rem;
+  list-style: none; display: flex; flex-wrap: wrap;
+}
+
+nav.main a {
+  display: block;
+  padding: .85rem 1rem;
+  color: #e8eef7;
+  text-decoration: none;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+nav.main a:hover, nav.main a:focus { background: rgba(255,255,255,.12); color: #fff; }
+
+nav.main a[aria-current="page"] {
+  background: var(--gold); color: #fff;
+}
+
+/* ---------- Headings & text ---------- */
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  color: var(--navy);
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin: 2rem 0 .6rem;
+  color: var(--navy-d);
+}
+
+h2 + p, h3 + p { margin-top: 0; }
+
+p, ul, ol, table { margin: 0 0 1.15rem; }
+
+a { color: var(--red); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--navy); }
+
+.lede { font-size: 1.25rem; color: var(--muted); }
+
+.eyebrow {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  text-transform: uppercase; letter-spacing: .1em;
+  font-size: .8rem; font-weight: 700; color: var(--gold);
+  margin: 0 0 .4rem;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--line);
+  padding: 3rem 0;
+}
+.hero h2 { margin-bottom: .75rem; }
+.hero p { max-width: 46rem; }
+.hero p:last-child { margin-bottom: 0; }
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-block;
+  background: var(--red); color: #fff;
+  padding: .8rem 1.6rem;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.btn:hover, .btn:focus { background: var(--navy); color: #fff; }
+.btn.secondary { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
+.btn.secondary:hover { background: var(--navy); color: #fff; }
+
+.btn-row { display: flex; flex-wrap: wrap; gap: .85rem; margin: 1.5rem 0 0; }
+
+/* ---------- Cards ---------- */
+
+.cards {
+  display: grid; gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--gold);
+  padding: 1.25rem 1.4rem;
+  background: #fff;
+}
+.card h3 { margin-top: 0; font-size: 1.15rem; }
+.card p:last-child, .card ul:last-child { margin-bottom: 0; }
+
+.card .meta {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: .95rem; color: var(--muted);
+}
+
+/* ---------- Tables ---------- */
+
+table { width: 100%; border-collapse: collapse; font-size: 1.02rem; }
+
+th, td {
+  text-align: left; padding: .7rem .8rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+thead th {
+  background: var(--navy); color: #fff;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: .9rem; text-transform: uppercase; letter-spacing: .06em;
+}
+
+tbody tr:nth-child(even) { background: var(--bg-alt); }
+
+.table-scroll { overflow-x: auto; margin-bottom: 1.15rem; }
+
+/* ---------- Callout ---------- */
+
+.callout {
+  background: var(--bg-alt);
+  border-left: 5px solid var(--gold);
+  padding: 1.25rem 1.5rem;
+  margin: 0 0 1.5rem;
+}
+.callout p:last-child { margin-bottom: 0; }
+.callout strong { color: var(--navy); }
+
+.note {
+  background: #fff8e5;
+  border: 1px dashed var(--gold);
+  padding: 1rem 1.25rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: .98rem;
+}
+
+/* ---------- Quote ---------- */
+
+blockquote {
+  margin: 0 0 1.5rem;
+  padding: .25rem 0 .25rem 1.5rem;
+  border-left: 4px solid var(--line);
+  font-style: italic;
+  color: var(--muted);
+}
+blockquote cite { display: block; font-style: normal; font-size: .95rem; margin-top: .6rem; }
+
+/* ---------- Photo grid ---------- */
+
+.photos { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+.photos figure { margin: 0; }
+.photos img { width: 100%; height: auto; display: block; border: 1px solid var(--line); }
+.photos figcaption { font-size: .98rem; color: var(--muted); margin-top: .5rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+
+.placeholder {
+  display: flex; align-items: center; justify-content: center;
+  aspect-ratio: 4 / 3; background: var(--bg-alt);
+  border: 1px dashed var(--line); color: var(--muted);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: .95rem; text-align: center; padding: 1rem;
+}
+
+/* ---------- Definition-style contact list ---------- */
+
+.contact-list { list-style: none; padding: 0; }
+.contact-list li { padding: .6rem 0; border-bottom: 1px solid var(--line); }
+.contact-list .role { display: block; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; color: var(--gold); font-weight: 700; }
+
+/* ---------- Footer ---------- */
+
+footer.site {
+  background: var(--navy); color: #c3d0e2;
+  padding: 2.5rem 0 3rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+}
+footer.site a { color: #fff; }
+footer.site .cols { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+footer.site h2 { color: #fff; font-size: 1.05rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: .6rem; }
+footer.site p { margin: 0 0 .5rem; }
+footer.site ul { list-style: none; padding: 0; margin: 0; }
+footer.site li { margin-bottom: .4rem; }
+footer.site .vivat {
+  margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.2);
+  display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content: space-between;
+  font-size: .92rem;
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+  nav.main, .skip, .btn-row { display: none; }
+  body { font-size: 11pt; }
+  .masthead, footer.site { background: #fff; color: #000; }
+  footer.site a, footer.site h2 { color: #000; }
+  a { color: #000; }
+}
