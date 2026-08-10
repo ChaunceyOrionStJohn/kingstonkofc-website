@@ -34,24 +34,41 @@ own computer — no internet needed. Click around. This is exactly how it will l
 
 ---
 
-## ✅ Before you publish: the checklist
+## What's already done
 
-The site is ready except for a few things only a council member can confirm. You will see
-**yellow dashed boxes** on some pages labelled *"Note for the webmaster."* Each one marks
-something to do. They are deliberately impossible to miss — **delete each box once you've handled
-it**, and they'll vanish from the site.
+The site is live at **kingstonkofc.org** and the content is current as of **10 August 2026**:
 
-1. **Verify the officer roster** (`officers.html`) — the names came from the old site. Confirm the
-   current slate with the Grand Knight. Officer phone numbers and e-mail addresses were previously
-   published publicly; only put them back if each officer is happy for them to be public.
-2. **Add this year's meeting dates** (`meetings.html`) — the table is empty and waiting. The
-   pattern is first and third Mondays at 7:00 PM.
-3. **Add current activities** (`meetings.html`) — Holy Hours, recruitment weekends, the picnic.
-4. **Set up a council e-mail address** and add it to `contact.html`. See *Never lose it again*
-   below — this is the single most important item on this list.
-5. **Add real photos** (`photos.html`) — see below.
-6. **Drop in the council logo** — see below.
-7. **Decide about the donation form** — see below.
+- Officer roster updated (Chancellor, Recorder and Outside Guard changed in August 2026), with
+  phone numbers and e-mail addresses
+- Meeting dates for the rest of 2026, first and third Mondays at 7:00 PM
+- Mass times checked against every parish's own website
+- Programs and upcoming events on the Meetings page
+- Four photographs in the gallery
+
+Two things are still open, marked with `FOR THE WEBMASTER` comments inside `contact.html`. They are
+HTML comments, so visitors never see them — you will only find them when editing the file:
+
+1. **A council-owned e-mail address** for the contact page. The most important item on this list —
+   see *Never lose it again* at the bottom.
+2. **Online donations**, if the Council wants them. A decision for the Financial Secretary and
+   Trustees, not the webmaster.
+
+---
+
+## Keeping it current
+
+The things most worth updating, in the order they go stale:
+
+| What | Where | How often |
+|---|---|---|
+| Upcoming events | `meetings.html`, "Coming up" | As they are announced |
+| Meeting dates | `meetings.html` table | Once a year, each January |
+| Mass times | `mass-times.html` | Check against the parish sites twice a year |
+| Officers | `officers.html` | After each election |
+| Photos | `photos.html` + `images/` | Whenever there are good ones |
+
+When you change Mass times, update the "checked against each parish's own website on…" line at the
+foot of that page so readers know how fresh it is.
 
 ---
 
