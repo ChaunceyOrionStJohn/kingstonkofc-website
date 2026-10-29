@@ -281,3 +281,14 @@ footer.site .vivat {
   footer.site a, footer.site h2 { color: #000; }
   a { color: #000; }
 }
+
+/* ---------- Time-limited notice + flyer ---------- */
+
+.callout.now { border-left-color: var(--red); background: #fff5f6; }
+
+.flyer { max-width: 30rem; margin: 1.5rem 0 0; }
+.flyer img { width: 100%; height: auto; display: block; border: 1px solid var(--line); }
+.flyer figcaption {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: .95rem; color: var(--muted); margin-top: .5rem;
+}

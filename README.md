@@ -70,6 +70,29 @@ The things most worth updating, in the order they go stale:
 When you change Mass times, update the "checked against each parish's own website on…" line at the
 foot of that page so readers know how fresh it is.
 
+### Standing check at every update: the old domain
+
+`kofc275.org` — the Council's former address, still printed on older materials — is no longer being
+pursued through Namecheap account recovery. Instead, **check whether it has become available to
+register** each time the site is updated, and claim it from the open market if it has.
+
+As of 28 October 2026 it is **not** available. It auto-renewed at the registry on 8 October 2026 and
+now shows an expiry of **8 October 2027**, with status `autoRenewPeriod` and `clientTransferProhibited`.
+
+What that means in practice: the registration renewed itself, most likely against a payment method
+still on the late webmaster's Namecheap account. A registrar can still reverse an auto-renewal during
+a grace period of roughly 45 days if the customer does not pay, so the domain *could* yet be deleted,
+pass through redemption (~30 days) and pending-delete (~5 days), and become free — in which case the
+earliest realistic window is around January 2027. If the payment stands, the next window is after
+October 2027.
+
+How to check: look up `kofc275.org` on any registrar's search, or read the registry record at
+`https://rdap.publicinterestregistry.org/rdap/domain/kofc275.org`. "Available" means no record is
+returned at all. Anything showing `redemptionPeriod` or `pendingDelete` means it is on its way out —
+that is the moment to be ready, and the five-day pending-delete window is when expired domains are
+usually caught by resellers, so a backorder service is worth considering if the Council really wants
+it back.
+
 ---
 
 ## How to edit the words
